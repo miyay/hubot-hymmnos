@@ -1,15 +1,16 @@
 # Description:
-#   Example scripts for you to examine and try out.
+#   Translate Japanese - Hymmnos
+#
+# Commands:
+#   hubot hym <word>
 #
 # Notes:
-#   They are commented out by default, because most of them are pretty silly and
-#   wouldn't be useful and amusing enough for day to day huboting.
-#   Uncomment the ones you want to try and experiment with.
+#   Hymmnoserver http://game.salburg.com/hymmnoserver/
 #
-#   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
+# Autho
+#   miyay
 
 module.exports = (robot) ->
-
   robot.respond /hym (.*)/i, (msg) ->
     request = msg.http('https://gist.githubusercontent.com/miyay/7b814acfd67920300787/raw/8d61059f8644e8849c58fc6ca37f4ed3da682145/hymm.json').get()
     request (err, res, body) ->
